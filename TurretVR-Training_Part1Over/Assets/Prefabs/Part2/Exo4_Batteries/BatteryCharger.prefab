@@ -563,6 +563,7 @@ GameObject:
   - component: {fileID: 3415349782788939929}
   - component: {fileID: 1202867662825904165}
   - component: {fileID: 2079515508507027390}
+  - component: {fileID: 8892637163455305970}
   m_Layer: 0
   m_Name: BatterySlot
   m_TagString: Untagged
@@ -614,6 +615,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8892637163455305970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415349782788939928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065b694d8702b5d40b2f7283189a6cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_basePreview: {fileID: 3415349782930111291}
+  m_isUsed: 0
+  OnSnap:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUnSnap:
+    m_PersistentCalls:
+      m_Calls: []
+  _DeactivateOnStart: 1
 --- !u!1 &3415349782930111291
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,6 +2802,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb9f9c649450b74d982f5af2f4e7557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_speedCharge: 0.01
+  m_BatteryOne: {fileID: 143245456929661562}
+  m_BatteryTwo: {fileID: 8892637163455305970}
 --- !u!1 &3415349783645043128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,6 +2816,7 @@ GameObject:
   - component: {fileID: 3415349783645043129}
   - component: {fileID: 7788981601241875037}
   - component: {fileID: 3841701275648305347}
+  - component: {fileID: 143245456929661562}
   m_Layer: 0
   m_Name: BatterySlot
   m_TagString: Untagged
@@ -2842,6 +2868,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &143245456929661562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415349783645043128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065b694d8702b5d40b2f7283189a6cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_basePreview: {fileID: 3415349783810394234}
+  m_isUsed: 0
+  OnSnap:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUnSnap:
+    m_PersistentCalls:
+      m_Calls: []
+  _DeactivateOnStart: 1
 --- !u!1 &3415349783810394234
 GameObject:
   m_ObjectHideFlags: 0

@@ -58,7 +58,6 @@ public class Grenade : MonoBehaviour
 
 		foreach(Collider asteroid in hitAsteroids)
 		{
-			Debug.Log("coucou");
 			asteroid.gameObject.GetComponent<Asteroid>().Kill(true);
 		}
 

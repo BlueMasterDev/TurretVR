@@ -183,12 +183,15 @@ public class TurretController : MonoBehaviour
     [SerializeField]
     private Snapper[] m_Snappers;
 
+	[SerializeField]
+	private BatteryHolder m_batteryHolder;
+
     //TODO : Complete method
     public bool CanFire() //Check if everything is ok for firing
     {
         foreach(Snapper snapper in m_Snappers)
         {
-            if (!snapper.m_isUsed || snapper.GetSnappedObject().gameObject.CompareTag("Defective"))
+            if (!snapper.m_isUsed || snapper.GetSnappedObject().gameObject.CompareTag("Defective") || m_batteryHolder.HasEnergy() == false)
             {
                 return false;
             }

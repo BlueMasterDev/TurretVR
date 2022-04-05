@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7165734718447317845}
   - component: {fileID: 2963295750460985727}
   - component: {fileID: 3698317421841336652}
+  - component: {fileID: 1390930421078730251}
   m_Layer: 0
   m_Name: BatterySlot
   m_TagString: Untagged
@@ -62,6 +63,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.42426825, y: 0.33260846, z: 0.20043752}
   m_Center: {x: -4.765872e-10, y: 0, z: 0.047354683}
+--- !u!114 &1390930421078730251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7165734718447317844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065b694d8702b5d40b2f7283189a6cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_basePreview: {fileID: 7165734718555187447}
+  m_isUsed: 0
+  OnSnap:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUnSnap:
+    m_PersistentCalls:
+      m_Calls: []
+  _DeactivateOnStart: 1
 --- !u!1 &7165734718555187447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,6 +2249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b267db51536df1c47b436c06938e9d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BatteryOne: {fileID: 1958815600352700525}
+  m_BatteryTwo: {fileID: 1390930421078730251}
 --- !u!1 &7165734719134722676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,6 +2262,7 @@ GameObject:
   - component: {fileID: 7165734719134722677}
   - component: {fileID: 7319602594297559831}
   - component: {fileID: 3075501436139987374}
+  - component: {fileID: 1958815600352700525}
   m_Layer: 0
   m_Name: BatterySlot
   m_TagString: Untagged
@@ -2289,6 +2314,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.42426825, y: 0.33260846, z: 0.20043752}
   m_Center: {x: -4.765872e-10, y: 0, z: 0.047354683}
+--- !u!114 &1958815600352700525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7165734719134722676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065b694d8702b5d40b2f7283189a6cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_basePreview: {fileID: 7165734719304375222}
+  m_isUsed: 0
+  OnSnap:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUnSnap:
+    m_PersistentCalls:
+      m_Calls: []
+  _DeactivateOnStart: 1
 --- !u!1 &7165734719304375222
 GameObject:
   m_ObjectHideFlags: 0

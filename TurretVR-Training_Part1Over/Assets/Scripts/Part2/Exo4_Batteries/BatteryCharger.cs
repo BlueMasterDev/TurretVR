@@ -4,11 +4,44 @@ using UnityEngine;
 
 public class BatteryCharger : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
+	[SerializeField]
+	private float m_speedCharge = 0.01f;
+
+	public Snapper m_BatteryOne;
+	public Snapper m_BatteryTwo;
+
+
+	// Update is called once per frame
+	void Update()
     {
-        //TODO : Voir en dessous
-        //Si il y a une ou des batteries de placées dans le chargeur, augmenter leur charge d'un taux fixe chaque seconde.
-        //Sinon, ne rien faire.
-    }
+		//TODO : Voir en dessous
+		//Si il y a une ou des batteries de placées dans le chargeur, augmenter leur charge d'un taux fixe chaque seconde.
+		//Sinon, ne rien faire.
+
+		if (m_BatteryOne)
+		{
+			if (m_BatteryOne.GetSnappedObject().enabled)
+			{
+				
+				m_BatteryOne.GetSnappedObject().gameObject.GetComponent<Battery>().ChangeCharge(m_speedCharge * Time.deltaTime);
+				
+			}
+			else
+				return;
+		}
+		
+
+		if (m_BatteryTwo)
+		{
+			if (m_BatteryTwo.GetSnappedObject().enabled)
+			{
+				
+				m_BatteryTwo.GetSnappedObject().gameObject.GetComponent<Battery>().ChangeCharge(m_speedCharge * Time.deltaTime);
+				
+			}
+			else
+				return;
+		}
+		
+	}
 }
