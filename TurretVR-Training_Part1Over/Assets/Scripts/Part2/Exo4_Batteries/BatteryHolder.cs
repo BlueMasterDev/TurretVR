@@ -18,20 +18,18 @@ public class BatteryHolder : MonoBehaviour
 		//Si il y a une ou des batteries de placées dans le réceptacle, diminuer leur charge d'un taux fixe chaque seconde.
 		//Sinon, ne rien faire.
 
-		if (m_BatteryOne)
+		if (m_BatteryOne.GetSnappedObject() != null)
 		{
 			if (m_BatteryOne.GetSnappedObject().enabled)
-			{
-				
-				m_BatteryOne.GetSnappedObject().gameObject.GetComponent<Battery>().ChangeCharge(m_speedCharge * Time.deltaTime);
-				
+			{				
+				m_BatteryOne.GetSnappedObject().gameObject.GetComponent<Battery>().ChangeCharge(m_speedCharge * Time.deltaTime);				
 			}
 			else
 				return;
 		}
 		
 
-		if (m_BatteryTwo)
+		if (m_BatteryTwo.GetSnappedObject() != null)
 		{
 			if (m_BatteryTwo.GetSnappedObject().enabled)
 			{
