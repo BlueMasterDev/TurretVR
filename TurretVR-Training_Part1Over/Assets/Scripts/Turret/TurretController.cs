@@ -43,6 +43,12 @@ public class TurretController : MonoBehaviour
 
     private bool _isOn = false;
 
+	public float DamagesPerSecond
+	{
+		get { return m_DamagesPerSecond; }
+		set { m_DamagesPerSecond = value; }
+	}
+
     private void Start()
     {
         _LastFire = Time.time - m_Cooldown;

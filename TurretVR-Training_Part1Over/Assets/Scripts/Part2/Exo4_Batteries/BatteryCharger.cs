@@ -19,29 +19,10 @@ public class BatteryCharger : MonoBehaviour
 		//Sinon, ne rien faire.
 
 		if (m_BatteryOne.GetSnappedObject() != null)
-		{
-			if (m_BatteryOne.GetSnappedObject().enabled)
-			{
-				
-				m_BatteryOne.GetSnappedObject().gameObject.GetComponent<Battery>().ChangeCharge(m_speedCharge * Time.deltaTime);
-				isActive = m_BatteryOne.GetSnappedObject().enabled;
-			}
-			else
-				return;
-		}
-		
+			m_BatteryOne.GetSnappedObject().gameObject.GetComponent<Battery>().ChangeCharge(m_speedCharge * Time.deltaTime);
 
 		if (m_BatteryTwo.GetSnappedObject() != null)
-		{
-			if (m_BatteryTwo.GetSnappedObject().enabled)
-			{
-				
-				m_BatteryTwo.GetSnappedObject().gameObject.GetComponent<Battery>().ChangeCharge(m_speedCharge * Time.deltaTime);
-				
-			}
-			else
-				return;
-		}
-		
+			m_BatteryTwo.GetSnappedObject().gameObject.GetComponent<Battery>().ChangeCharge(m_speedCharge * Time.deltaTime);
+
 	}
 }
